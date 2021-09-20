@@ -222,7 +222,7 @@ body{
     fill:  #262626;
 }
 .footer .header-icon:hover{
-    fill:#444444;
+    fill: red;
 }
 
 @media (max-width: 1250px){
