@@ -240,12 +240,11 @@ body{
     margin-bottom: 20vh;
     }
 }
-@media (max-width: 960px){
+
+@media (max-width: 840px){
     .navigation-panel{
         display: none;
     }
-}
-@media (max-width: 840px){
     .ass-description {
         text-align: revert;
         width: auto;

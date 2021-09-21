@@ -271,12 +271,11 @@ body{
     margin-bottom: 20vh;
     }
 }
-@media (max-width: 960px){
+
+@media (max-width: 840px){
     .navigation-panel{
         display: none;
     }
-}
-@media (max-width: 840px){
     .ass-description {
         text-align: revert;
         width: auto;
@@ -344,74 +343,7 @@ body{
 
 
 /*projects*/
-.projects{
-    background: linear-gradient(180.5deg, #000000 0.47%, rgba(0, 0, 0, 0) 98.03%);
-}
-.project-slide{
-    display: flex;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-.project-image{
-    width: 338px;
-    height: 268px;
-}
-.project-text{
-    display: flex;
-    flex-basis: 60%;
-    flex-wrap: wrap;
-}
-.project-title{
-    flex-basis: 100%;
-    font-weight: bold;
-    font-size: 24px;
-    line-height: 28px;
-    margin: 0;
-    margin-bottom: 41px;
-}
-.project-time, .project-cost{
-    flex-basis: 50%;
-}
-.project-time, .project-cost, .project-feedback{
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 44px;
-}
-.project-description{
-    margin-left: 16px;
-}
-.project-subtitle{
-    font-weight: bold;
-    font-size: 18px;
-    line-height: 21px;
-    margin: 0;
-    margin-bottom: 8px;
-}
-.project-paragraph{
-    font-weight: normal;
-    font-size: 16px;
-    line-height: 19px;
-    margin:0;
-}
-.projects-pagination{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-.projects-bullet{
-    width: 10px;
-    height: 10px;
-    border: 2px solid #FFBB01;
-    box-sizing: border-box;
-    border-radius: 50%;
-    display: inline-block;
-    margin-left: 5px;
-    margin-right: 5px;
-}
-.projects-bullet-active{
-    background-color: #FFBB01;
-}
 .swiper {
     width: 600px;
-    height: 300px;
   }
+
