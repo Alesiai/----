@@ -18,11 +18,15 @@
     justify-content: center;
     position:fixed;
     
+
     cursor:pointer;
     color:rgb(201, 201, 201);
     font-size: 13px;
 }
-
+#toTop div
+{
+    display: flex;
+}
 
 body{
     font-family: sans-serif; 
