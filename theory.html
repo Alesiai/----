@@ -9,6 +9,28 @@
     <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
     <link href="style/normalize.css" rel="stylesheet">
     <link href="style/style-theory.css" rel="stylesheet">
+
+
+
+
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+ 
+    <script type="text/javascript">
+        $(function() {
+            $(window).scroll(function() {
+                if($(this).scrollTop() != 0) {
+                        $('#toTop').fadeIn();
+                    } 
+                    else 
+                    {
+                        $('#toTop').fadeOut();
+                    }
+                    });
+                $('#toTop').click(function() {
+                    $('body,html').animate({scrollTop:0},800);
+                });
+            });
+    </script>
 </head>
 
 <body>	
@@ -20,13 +42,14 @@
                 <span class="line3"></span>
             </span>
             <div class="name">
-                <a href="index.html" class="link">Курсовая работа</a>
+                <a href="index.html" class="link">Измерение сопротивления мостовым методом</a>
             </div>
             <div class="navigation">
                 <nav class="navigation-panel">
                     <a href="theory.html" class="navigation-link">Теоретические сведения</a>
                     <a href="structura.html" class="navigation-link">Структура установки</a>
                     <a href="#" class="navigation-link">Симулятор установки</a>
+                    
                 </nav>
             </div>
         </div>
@@ -34,7 +57,8 @@
     <div class="about">
         <div class="about-us"><h1 class="title">Теоретические сведения</h1>
             <h2 class="title-text">Измерение сопротивления мостовым методом</h4>
-            <h4 class="title-text">Выполнила: Иванова Алеся Александровна ИСиТ-3</h4>
+                <a href="Profile.html" class="title-text">Выполнила: Иванова Алеся Александровна ИСиТ-3</a>
+                <button class="button hero-button wow fadeInRight" data-wow-delay="0.8s">Симулятор установки</button>
         </div>
     </div>
     <div class="menu-sitebar">
@@ -46,6 +70,8 @@
         <!--1-st nav-group-->
     </div>
     <div class="container">
+        
+    <div ID = "toTop" >  Наверх </div >
         <div class="assortment">
                <div class="assortment-title"><h1>Ученые без которых опыт бы не произошел</h1></div> 
         <!--/.assortment-title -->
@@ -53,7 +79,7 @@
                 <div class="ass">
                     <img src="image/Uitston.jpg" alt="coffe" class="ass-img" width="200px" height="250px">
                     <div class="ass-description">
-                        Сэр Чарльз Уитстон — английский физик, автор многих изобретений. Член Лондонского 
+                        <span style=" color:rgb(201, 12, 49);">Сэр Чарльз Уитстон </span> — английский физик, автор многих изобретений. Член Лондонского 
                         королевского общества (1836), иностранный член Парижской академии наук (1873
                          корреспондент с 1842).  В октябре 1875 года Чарльз Уитстон находился в Париже. 
                          Там он надеялся посетить заседания Академии Наук и продвигать свою конструкцию 
@@ -64,7 +90,7 @@
            <div class="assortment-in-cafe">
             <div class="ass">
                 <div class="ass-description1">
-                    Густав Кирхгоф - немецкий физик XIX века. Член Берлинской академии наук, иностранный член Лондонского 
+                    <span style=" color:rgb(201, 12, 49);">Густав Кирхгоф  </span> - немецкий физик XIX века. Член Берлинской академии наук, иностранный член Лондонского 
                     королевского общества (1875), член-корреспондент Петербургской академии наук (1862), 
                     Парижской академии наук (1870).В 1935 г. Международный астрономический союз присвоил имя 
                     Густава Кирхгофа кратеру на видимой стороне Луны.Кирхгоф, будучи прекрасным знатоком 

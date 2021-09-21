@@ -2,6 +2,28 @@
     box-sizing: border-box;
     font-family: "Roboto Slab", "Times New Roman", serif;
 }
+
+#toTop {
+    bottom:20px; /* отступ кнопки от нижнего края страницы*/
+    right:20px;
+
+    width:50px;
+    height:50px;
+    border-radius: 50%;
+    border:none;
+    background: rgb(201, 12, 49);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position:fixed;
+    
+    cursor:pointer;
+    color:rgb(201, 201, 201);
+    font-size: 13px;
+}
+
+
 body{
     font-family: sans-serif; 
     padding-top: 46px;
@@ -92,7 +114,7 @@ body{
     fill:  #E5E5E5;
 }
 .header-icon:hover{
-    fill:white;
+    fill:rgb(201, 12, 49);
 }
 .menu-sitebar{
     display: none;
@@ -241,7 +263,7 @@ body{
 .IsActive, .Most
 {
     color: crimson;
-    -webkit-text-emphasis: circle;
+    cursor: pointer;
 }
 .IsActive.active 
 {
@@ -300,17 +322,40 @@ body{
     line-height: 22px;
     margin-left: 12px;
 }
-.footer .navigation-link:hover
-{
-    color: #444444;
-}
+
 .footer .header-icon{
     fill:  #262626;
 }
-.footer .header-icon:hover{
-    fill:#444444;
+.footer .header-icon:hover, .footer .navigation-link:hover{
+    fill:rgb(201, 12, 49);
 }
-
+a.title-text:hover
+{
+    color: rgb(201, 201, 201);
+}
+a.title-text
+{
+    text-decoration: none ;
+    font-weight: 100;
+    color: white;
+}
+.button{
+    border: none;
+    background: rgb(201, 12, 49);
+    border-radius: 5px;
+    padding: 24px 42px;
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 14px;
+    align-items: center;
+    text-align: center;
+    color: #e0e0e0;
+    margin-top: 20px;
+}
+b:hover
+{
+    color:rgb(201, 12, 49);
+}
 @media (max-width: 1250px){
     .container {
         justify-content: flex-start;
@@ -321,45 +366,16 @@ body{
         width: 95%;
     }
     .about {
-    max-width: 1200px;
-    margin-top: 20vh;
-    margin-bottom: 20vh;
-    }
-}
-
-@media (max-width: 840px){
-    .navigation-panel{
-        display: none;
-    }
-    .ass-description {
-        text-align: revert;
-        width:auto;
-        margin: auto;
-    }
-    .ass-description1 {
-        text-align: revert;
-        width:auto;
-        margin: auto;
-    }
-    .about-us{
-        max-width: 650px;
-        padding-left: 20px;
-    }
-    .about{
-        margin-top: 10vh;
-        margin-bottom: 10vh;
-    }
-    .assortment-in-cafe {
-        display: list-item;
-        padding-top: 20px;
-        max-width: 100%;
-        margin: auto;
-        display: block;
-        justify-content: space-around;
+        max-width: 1200px;
+        margin-top: 20vh;
+        margin-bottom: 20vh;
     }
     .ass{
         display: contents;
         margin: auto;
+    }
+    .navigation-panel{
+        display: none;
     }
     .nav-group{
         margin-top: 35px ;
@@ -389,6 +405,39 @@ body{
     .m-menu{
         display: flex;
     }
+
+}
+
+@media (max-width: 840px){
+    
+    .ass-description {
+        text-align: revert;
+        width:auto;
+        margin: auto;
+    }
+    .ass-description1 {
+        text-align: revert;
+        width:auto;
+        margin: auto;
+    }
+    .about-us{
+        max-width: 650px;
+        padding-left: 20px;
+    }
+    .about{
+        margin-top: 10vh;
+        margin-bottom: 10vh;
+    }
+    .assortment-in-cafe {
+        display: list-item;
+        padding-top: 20px;
+        max-width: 100%;
+        margin: auto;
+        display: block;
+        justify-content: space-around;
+    }
+    
+    
     .AboutMost
     {
         display: inline;

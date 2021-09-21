@@ -18,5 +18,3 @@ omBtn.addEventListener("click", function(){
     img.classList.toggle("active")
     isactive.classList.toggle("active")
 })
-
-   

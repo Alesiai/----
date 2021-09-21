@@ -223,7 +223,29 @@ body{
 .footer .header-icon:hover{
     fill: #444444;
 }
-
+a.title-text:hover
+{
+    color: rgb(201, 201, 201);
+}
+a.title-text
+{
+    text-decoration: none ;
+    font-weight: 100;
+    color: white;
+}
+.button{
+    border: none;
+    background: rgb(201, 12, 49);
+    border-radius: 5px;
+    padding: 24px 42px;
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 14px;
+    align-items: center;
+    text-align: center;
+    color: #e0e0e0;
+    margin-top: 20px;
+}
 @media (max-width: 1250px){
     .container {
         justify-content: flex-start;

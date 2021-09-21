@@ -21,6 +21,10 @@
         .slick-next:before {
         color: black;
         }
+        .slider2
+        {
+            display: none;
+        }
         #slide1f
         {
             display: flex; align-items: center; justify-content: space-around;
@@ -30,10 +34,116 @@
         {
             display: inline-block;
         }
+        .slider2
+        {
+            display: block;
+        }
+        .slider1
+        {
+            display: none;
+        }
         .slick-dotted.slick-slider {
             margin-bottom: 30px;
             margin-top: 110px;
         }
+        .slick-slider
+        {
+            margin-bottom: 10px;
+        }
+        .ass-description
+        {
+            margin-left: 0;
+        }
+        }
+
+    </style>
+
+    <style>
+
+        #myImg, #myImg1, #myImg2, #myImg3, #myImg4 {
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+        }
+        
+        #myImg:hover, #myImg1:hover, #myImg2:hover, #myImg3:hover, #myImg4:hover {opacity: 0.7;}
+        
+        /* The Modal (background) */
+        .modal {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 99; /* Sit on top */
+            padding-top: 100px; /* Location of the box */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            overflow: auto; /* Enable scroll if needed */
+            background-color: rgb(0,0,0); /* Fallback color */
+            background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+        }
+        
+        /* Modal Content (image) */
+        .modal-content {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+        }
+        
+        /* Caption of Modal Image */
+        #caption {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 10px 0;
+            height: 150px;
+        }
+        
+        /* Add Animation */
+        .modal-content, #caption {    
+            -webkit-animation-name: zoom;
+            -webkit-animation-duration: 0.6s;
+            animation-name: zoom;
+            animation-duration: 0.6s;
+        }
+        
+        @-webkit-keyframes zoom {
+            from {-webkit-transform:scale(0)} 
+            to {-webkit-transform:scale(1)}
+        }
+        
+        @keyframes zoom {
+            from {transform:scale(0)} 
+            to {transform:scale(1)}
+        }
+        
+        /* The Close Button */
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+        }
+        
+        .close:hover,
+        .close:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        
+        /* 100% Image Width on Smaller Screens */
+        @media only screen and (max-width: 700px){
+            .modal-content {
+                width: 100%;
+            }
         }
     </style>
 </head>
@@ -47,7 +157,7 @@
                 <span class="line3"></span>
             </span>
             <div class="name">
-                <a href="index.html" class="link">Курсовая работа</a>
+                <a href="index.html" class="link">Измерение сопротивления мостовым методом</a>
             </div>
             <div class="navigation">
                 <nav class="navigation-panel">
@@ -58,11 +168,12 @@
             </div>
         </div>
     </header>
-    
+
     <div class="about">
         <div class="about-us"><h1 class="title">Структура установки</h1>
             <h2 class="title-text">Измерение сопротивления мостовым методом</h4>
-            <h4 class="title-text">Выполнила: Иванова Алеся Александровна ИСиТ-3</h4>
+                <a href="Profile.html" class="title-text">Выполнила: Иванова Алеся Александровна ИСиТ-3</a>
+                <button class="button hero-button wow fadeInRight" data-wow-delay="0.8s">Симулятор установки</button>
         </div>
     </div>
     
@@ -74,58 +185,176 @@
         </nav>
         <!--1-st nav-group-->
     </div>
+   
     <div class="container">
-
-        <div class="assortment">
+        <div id="myModal" class="modal">
+        <span class="close">×</span>
+        <img class="modal-content" id="img01">
+        <div id="caption"></div>
+        </div>
+            <div class="assortment">
             <div class="assortment-title"><h1>Фотогалерея установки</h1></div> 
         </div>
-
+        
+    
         <section class="regular slider1">
             <div>
                 <div id="slide1f">
-                    <img src="image/Slide_1.jpg" height="300vw">
+                    <img id="myImg" src="image/Slide_1.jpg" height="300vw" >
                     <div class="ass-description">
                         Так выглядит вся установка, в нее входят следующие элементы: 
                         Мост Уитстона, Линейка железная, на 90 см, Магазин сопротивлений, ключ, мультирезистор
-                  </div> 
+                    </div> 
+                    <script>
+                        // Get the modal
+                        var modal = document.getElementById('myModal');
+                            
+                            // Get the image and insert it inside the modal - use its "alt" text as a caption
+                            var img = document.getElementById('myImg');
+                            var modalImg = document.getElementById("img01");
+                            var captionText = document.getElementById("caption");
+                            img.onclick = function()
+                                {
+                                        modal.style.display = "block";
+                                        modalImg.src = this.src;
+                                        captionText.innerHTML = this.alt;
+                                }
+                                // Get the <span> element that closes the modal
+                                var span = document.getElementsByClassName("close")[0];
+                                
+                                // When the user clicks on <span> (x), close the modal
+                                span.onclick = function() { 
+                                    modal.style.display = "none";
+                                }
+                        
+                        
+                    </script>
                 </div>
             </div>
             <div>
                 <div id="slide1f"> 
-                    <img src="image/Slide_2.jpg" height="300vw">
+                    <img id="myImg1" src="image/Slide_2.jpg" height="300vw">
                     <div class="ass-description">
                         Мультирезистор: На нем можно выставить последовательное и параллельное соединение
                         одного, двух или трех резисторов
                     </div>
+                    <script>
+                        // Get the modal
+                        var modal = document.getElementById('myModal');
+                        
+                        // Get the image and insert it inside the modal - use its "alt" text as a caption
+                        var img = document.getElementById('myImg1');
+                        var modalImg = document.getElementById("img01");
+                        var captionText = document.getElementById("caption");
+                        img.onclick = function(){
+                            modal.style.display = "block";
+                            modalImg.src = this.src;
+                            captionText.innerHTML = this.alt;
+                        }
+                        
+                        // Get the <span> element that closes the modal
+                        var span = document.getElementsByClassName("close")[0];
+                        
+                        // When the user clicks on <span> (x), close the modal
+                        span.onclick = function() { 
+                            modal.style.display = "none";
+                        }
+                        </script>
                 </div>
             </div>
             <div>
                 <div id="slide1f"> 
-                    <img src="image/Slide_3.jpg" height="300vw">
+                    <img id="myImg2" src="image/Slide_3.jpg" height="300vw">
                     <div class="ass-description">
                         Мост Уитстона для измерения сопротивления. Именно на нем и происходит определение равности
                      как только стрелка покажет 0 - можем записывать сопротивление, которое будет настраиваться на магазине 
                      сопротивлений
                     </div>
+                    <script>
+                        // Get the modal
+                        var modal = document.getElementById('myModal');
+                        
+                        // Get the image and insert it inside the modal - use its "alt" text as a caption
+                        var img = document.getElementById('myImg2');
+                        var modalImg = document.getElementById("img01");
+                        var captionText = document.getElementById("caption");
+                        img.onclick = function(){
+                            modal.style.display = "block";
+                            modalImg.src = this.src;
+                            captionText.innerHTML = this.alt;
+                        }
+                        
+                        // Get the <span> element that closes the modal
+                        var span = document.getElementsByClassName("close")[0];
+                        
+                        // When the user clicks on <span> (x), close the modal
+                        span.onclick = function() { 
+                            modal.style.display = "none";
+                        }
+                        </script>
                 </div>
             </div>
             <div>
                 <div id="slide1f"> 
-                    <img src="image/Slide_4.jpg"  height="300vw">
+                    <img id="myImg3" src="image/Slide_4.jpg"  height="300vw">
                     <div class="ass-description">
                        Магазин сопротивлений. Данное оборудование позволяет выстравать нужное нам сопротивление для получение 
                        нулевого положения на показателе моста Уитстона. Диапазон такого магазина составляет 0,01 - 10 000 Ом. 
                        Что позволяет нам максимально точно вычислять сопротивление с погрешностью в 0,005 Ом
                     </div>
+                    <script>
+                        // Get the modal
+                        var modal = document.getElementById('myModal');
+                        
+                        // Get the image and insert it inside the modal - use its "alt" text as a caption
+                        var img = document.getElementById('myImg3');
+                        var modalImg = document.getElementById("img01");
+                        var captionText = document.getElementById("caption");
+                        img.onclick = function(){
+                            modal.style.display = "block";
+                            modalImg.src = this.src;
+                            captionText.innerHTML = this.alt;
+                        }
+                        
+                        // Get the <span> element that closes the modal
+                        var span = document.getElementsByClassName("close")[0];
+                        
+                        // When the user clicks on <span> (x), close the modal
+                        span.onclick = function() { 
+                            modal.style.display = "none";
+                        }
+                        </script>
                 </div>
             </div>
             <div>
                 <div id="slide1f"> 
-                    <img src="image/Slide_5.jpg" height="300vw">
+                    <img id="myImg4" src="image/Slide_5.jpg" height="300vw">
                     <div class="ass-description">
                         Ключ - маленькая, но очень необходимая часть установки. При замыкании ключа ток идет на резисторы и мы 
                         можем отмерить сопротивление
                     </div>
+                    <script>
+                        // Get the modal
+                        var modal = document.getElementById('myModal');
+                        
+                        // Get the image and insert it inside the modal - use its "alt" text as a caption
+                        var img = document.getElementById('myImg4');
+                        var modalImg = document.getElementById("img01");
+                        var captionText = document.getElementById("caption");
+                        img.onclick = function(){
+                            modal.style.display = "block";
+                            modalImg.src = this.src;
+                            captionText.innerHTML = this.alt;
+                        }
+                        
+                        // Get the <span> element that closes the modal
+                        var span = document.getElementsByClassName("close")[0];
+                        
+                        // When the user clicks on <span> (x), close the modal
+                        span.onclick = function() { 
+                            modal.style.display = "none";
+                        }
+                        </script>
                 </div>
             </div>
           </section>
@@ -146,9 +375,60 @@
                 <img src="image/Slide_5.jpg" height="100vw">
             </div>
           </section>
-    </div>
+          
+          <section class="regular1 slider2">
+            <div>
+                <div id="slide1f">
+                    <img id="myImg" src="image/Slide_1.jpg" height="300vw" >
+                    <div class="ass-description">
+                        Так выглядит вся установка, в нее входят следующие элементы: 
+                        Мост Уитстона, Линейка железная, на 90 см, Магазин сопротивлений, ключ, мультирезистор
+                    </div> 
+                </div>
+            </div>
+            <div>
+                <div id="slide1f"> 
+                    <img id="myImg1" src="image/Slide_2.jpg" height="300vw">
+                    <div class="ass-description">
+                        Мультирезистор: На нем можно выставить последовательное и параллельное соединение
+                        одного, двух или трех резисторов
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="slide1f"> 
+                    <img id="myImg2" src="image/Slide_3.jpg" height="300vw">
+                    <div class="ass-description">
+                        Мост Уитстона для измерения сопротивления. Именно на нем и происходит определение равности
+                     как только стрелка покажет 0 - можем записывать сопротивление, которое будет настраиваться на магазине 
+                     сопротивлений
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="slide1f"> 
+                    <img id="myImg3" src="image/Slide_4.jpg"  height="300vw">
+                    <div class="ass-description">
+                       Магазин сопротивлений. Данное оборудование позволяет выстравать нужное нам сопротивление для получение 
+                       нулевого положения на показателе моста Уитстона. Диапазон такого магазина составляет 0,01 - 10 000 Ом. 
+                       Что позволяет нам максимально точно вычислять сопротивление с погрешностью в 0,005 Ом
+                    </div>
+                </div>
+            </div>
+            <div>
+                <div id="slide1f"> 
+                    <img id="myImg4" src="image/Slide_5.jpg" height="300vw">
+                    <div class="ass-description">
+                        Ключ - маленькая, но очень необходимая часть установки. При замыкании ключа ток идет на резисторы и мы 
+                        можем отмерить сопротивление
+                    </div>
+                </div>
+            </div>
+          </section>
+    
             <!-- /.projects-slider -->
     </div>
+    
     <footer class="footer">
         <div class="footer-block">
         <div class="navigation">
@@ -190,7 +470,6 @@
         $('.regular').slick({
             slidesToShow: 1,
             slidesToScroll: 1,
-            arrows: false,
             fade: true,
             asNavFor: '.slider-nav'
             });
@@ -198,10 +477,21 @@
             slidesToShow: 3,
             slidesToScroll: 1,
             asNavFor: '.regular',
+            arrows: false,
             dots: true,
             centerMode: true,
             focusOnSelect: true
             });
+
+
+            $('.regular1').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            fade: true,
+            arrows: true,
+            });
+        
+        
     });
 </script>
  <script src="js/main.js"></script>
