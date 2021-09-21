@@ -127,7 +127,7 @@ body{
     border-radius: 4px;
     overflow: hidden;
     width: 100%;
-    margin-top: 30vh;
+    margin-top: 20vh;
     flex-grow: 1;
 }
 
@@ -170,7 +170,6 @@ body{
 .ass-description {
     text-align: left;
     margin-left: 50px;
-    width: 600px;
     color: #313131;
 }
 .ass-img{
@@ -222,7 +221,7 @@ body{
     fill:  #262626;
 }
 .footer .header-icon:hover{
-    fill:#444444;
+    fill: #444444;
 }
 
 @media (max-width: 1250px){

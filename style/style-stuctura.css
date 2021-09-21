@@ -126,7 +126,7 @@ body{
     border-radius: 4px;
     overflow: hidden;
     width: 100%;
-    margin-top: 30vh;
+    margin-top: 20vh;
     flex-grow: 1;
 }
 
@@ -345,5 +345,4 @@ body{
 /*projects*/
 .swiper {
     width: 600px;
-  }
-
+}
