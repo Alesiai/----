@@ -180,6 +180,7 @@ body{
     margin: auto;
     display: flex;
     justify-content: space-around;
+    align-items: center;
 }
 
 .ass{
@@ -378,6 +379,65 @@ b:hover
         display: contents;
         margin: auto;
     }
+    
+
+}
+
+@media (max-width: 840px){
+    .title
+    {
+        margin-bottom: 10px;
+    }
+    h2.title-text
+    {
+        margin: 0;
+    }
+    a.title-text
+    {
+        margin-top: 10px; 
+    }
+    .button
+    {
+        margin-top: 10px;
+        padding: 12px 21px;
+    }
+    .name 
+    {
+        margin: 10px;
+    }
+    .ass{
+        display: contents;
+        margin: auto;
+    }
+    .ass-description {
+        text-align: revert;
+        width:auto;
+        margin-left: 0;
+        margin: auto;
+    }
+    .ass-description1 {
+        text-align: revert;
+        width:auto;
+        margin-left: 0;
+        margin: auto;
+    }
+    .about-us{
+        max-width: 650px;
+        padding-left: 1px;
+        display: grid;
+    }
+    .about{
+        margin: 20px;
+    }
+    .assortment-in-cafe {
+        display: list-item;
+        padding-top: 20px;
+        max-width: 100%;
+        margin: auto;
+        display: block;
+        justify-content: space-around;
+        align-items: center;
+    }
     .navigation-panel{
         display: none;
     }
@@ -388,7 +448,6 @@ b:hover
     .navigation-link{
         margin-top: 12px;
     }
-
     .menu-sitebar{
         display: block;
         position: fixed;
@@ -396,10 +455,10 @@ b:hover
         top: 25px;
         width: 100%;
         max-width: 170px;
-        padding-top: 12px;
+        padding-top: 25px;
         height: 100%;
         padding-left: 2%;
-        background-color:rgba(0, 0, 0, 0.6);
+        background-color:rgba(0, 0, 0, 0.8);
         transform: translateX(-100%);
         transition: transform 0.2s;
     }
@@ -409,50 +468,36 @@ b:hover
     .m-menu{
         display: flex;
     }
-
-}
-
-@media (max-width: 840px){
-    
-    .ass-description {
-        text-align: revert;
-        width:auto;
-        margin: auto;
-    }
-    .ass-description1 {
-        text-align: revert;
-        width:auto;
-        margin: auto;
-    }
-    .about-us{
-        max-width: 650px;
-        padding-left: 20px;
-    }
-    .about{
-        margin-top: 10vh;
-        margin-bottom: 10vh;
-    }
-    .assortment-in-cafe {
-        display: list-item;
-        padding-top: 20px;
-        max-width: 100%;
-        margin: auto;
-        display: block;
-        justify-content: space-around;
-    }
-    
     
     .AboutMost
     {
         display: inline;
+    }
+    .footer-block
+    {
+        display: flow-root;
+    }
+    .theory-description
+    {
+        margin-left: 0;
+    }
+    .shema-1-img
+    {
+        width: 100%;
+    }
+    .Most-img:hover
+    {
+        width: 100%;
     }
 }
 @media (max-width: 620px){
     .container
     {
         display: block;
+        margin-top: 10px;
     }
     .autor{
         display: none;
     }
 }
+
