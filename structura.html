@@ -617,11 +617,6 @@
             </div>
 
             <div class="videoblock">
-                <div class="buttons">
-                <button class="button" onclick="play()">Play</button>
-                <button class="button" onclick="stop()">Restart</button>
-                <button class="button" onclick="pause()">Pause</button>
-                </div>
                 <div class="video" >
                     <video id="videoPlayer" width="700px" height="525px" controls="controls" poster="video/Анимационная модель.mp4">
                         <source src="video/Анимационная модель.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
@@ -668,28 +663,7 @@
     </footer>
     <script src="https://code.jquery.com/jquery-2.2.0.min.js" type="text/javascript"></script>
 
-    <script>
-        var video;
-        var display;
-
-        window.onload = function() {
-            video = document.getElementById("videoPlayer");
-        };
-
-        function play() {
-            video.play();
-        }
-
-        function pause() {
-            video.pause();
-        }
-
-        function stop() {
-            video.pause();
-            video.currentTime = '0';
-            video.play();
-        }
-    </script>
+    
   <script src="./slick/slick.js" type="text/javascript" charset="utf-8"></script>
   <script type="text/javascript">
     $(document).on('ready', function() {
