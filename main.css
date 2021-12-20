@@ -84,7 +84,6 @@ input#Qdialog {
 }
 .dialog .history .question, .dialog .history .answer{
 	margin:5px;
-	width:90%;
 	border-radius: 5px;
 	padding:5px;
 }
